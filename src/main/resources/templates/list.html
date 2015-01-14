@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>List Pegawai</title>
+</head>
+<body>
+
+<h1>List Pegawai</h1>
+<table border="1">
+  <tr>
+    <th>Nama</th>
+    <th>Golongan</th>
+  </tr>
+  <tr th:each="p : ${pegawais}">
+    <td th:text="${p.nama}">Nama</td>
+    <td th:text="${p.golongan}">Golongan</td>
+  </tr>
+</table>
+
+<a href="#" th:href="@{/pegawai/form}" th:text="Form">Form Insert</a>
+
+</body>
+</html>

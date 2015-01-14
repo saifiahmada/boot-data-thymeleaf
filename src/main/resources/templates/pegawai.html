@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Pegawai</title>
+</head>
+<body>
+
+<h1>Form Pegawai</h1>
+<form action="#" th:action="@{/pegawai/save}" th:object="${pegawai}" method="post">
+	<label th:text="Nama" ></label> <input type="text" th:field="*{nama}" />
+	<br/>
+	<label th:text="Golongan" ></label> <input type="text" th:field="*{golongan}" />
+	<br/>
+	<input type="submit" value="Simpan" /> 
+</form>
+
+<a href="" th:href="@{/pegawai/list}" th:text="List">List</a>
+
+</body>
+</html>
